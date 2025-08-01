@@ -6,7 +6,11 @@ import lombok.Data;
 
 import java.sql.Timestamp;
 
-
+/**
+ * Trade entity representing a trade in the system.
+ * It includes fields for account, type, quantities, prices, trade date,
+ * security, status, trader, benchmark, book, creation and revision details.
+ */
 @Entity
 @Table(name = "trade")
 @Data

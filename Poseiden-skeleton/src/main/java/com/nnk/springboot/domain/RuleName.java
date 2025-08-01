@@ -6,6 +6,11 @@ import lombok.Data;
 
 import java.sql.Timestamp;
 
+/**
+ * RuleName entity representing a rule in the system.
+ * It includes fields for name, description, JSON representation,
+ * template, SQL string, and SQL part.
+ */
 @Entity
 @Table(name = "rulename")
 @Data

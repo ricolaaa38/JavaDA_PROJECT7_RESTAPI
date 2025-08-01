@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.nnk.springboot.BidTest" time="5.431" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.nnk.springboot.SecurityTest" time="1.829" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -47,7 +47,7 @@
     <property name="localRepository" value="C:\Users\nicol\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\nicol\AppData\Local\Temp\"/>
-    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="com.zaxxer.hikari.pool_number" value="2"/>
     <property name="java.version" value="17.0.15"/>
     <property name="user.dir" value="C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton"/>
     <property name="os.arch" value="amd64"/>
@@ -64,9 +64,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="bidListTest" classname="com.nnk.springboot.BidTest" time="0.715">
-    <system-out><![CDATA[09:24:24.550 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.nnk.springboot.BidTest]: BidTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-09:24:24.629 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.nnk.springboot.Application for test class com.nnk.springboot.BidTest
+  <testcase name="testAuthenticatedUserSessionAccessToProtectedPage" classname="com.nnk.springboot.SecurityTest" time="0.611">
+    <system-out><![CDATA[2025-08-01T09:24:30.076+02:00  INFO 18240 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.nnk.springboot.SecurityTest]: SecurityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-01T09:24:30.085+02:00  INFO 18240 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.nnk.springboot.Application for test class com.nnk.springboot.SecurityTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -76,21 +76,19 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2025-08-01T09:24:25.019+02:00  INFO 18240 --- [           main] com.nnk.springboot.BidTest               : Starting BidTest using Java 17.0.15 with PID 18240 (started by nicol in C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton)
-2025-08-01T09:24:25.026+02:00  INFO 18240 --- [           main] com.nnk.springboot.BidTest               : No active profile set, falling back to 1 default profile: "default"
-2025-08-01T09:24:25.578+02:00  INFO 18240 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-01T09:24:25.660+02:00  INFO 18240 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 6 JPA repository interfaces.
-2025-08-01T09:24:26.098+02:00  INFO 18240 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-01T09:24:26.177+02:00  INFO 18240 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
-2025-08-01T09:24:26.180+02:00  INFO 18240 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2025-08-01T09:24:26.370+02:00  INFO 18240 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2025-08-01T09:24:26.492+02:00  INFO 18240 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-01T09:24:26.519+02:00  INFO 18240 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-01T09:24:26.792+02:00  INFO 18240 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c76fce4
-2025-08-01T09:24:26.795+02:00  INFO 18240 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-01T09:24:26.848+02:00  INFO 18240 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.41
-2025-08-01T09:24:27.107+02:00  INFO 18240 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2025-08-01T09:24:27.790+02:00  INFO 18240 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-01T09:24:30.115+02:00  INFO 18240 --- [           main] com.nnk.springboot.SecurityTest          : Starting SecurityTest using Java 17.0.15 with PID 18240 (started by nicol in C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton)
+2025-08-01T09:24:30.115+02:00  INFO 18240 --- [           main] com.nnk.springboot.SecurityTest          : No active profile set, falling back to 1 default profile: "default"
+2025-08-01T09:24:30.273+02:00  INFO 18240 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-01T09:24:30.284+02:00  INFO 18240 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 6 JPA repository interfaces.
+2025-08-01T09:24:30.362+02:00  INFO 18240 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-01T09:24:30.368+02:00  INFO 18240 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-01T09:24:30.368+02:00  INFO 18240 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-01T09:24:30.368+02:00  INFO 18240 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-01T09:24:30.384+02:00  INFO 18240 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31b11287
+2025-08-01T09:24:30.384+02:00  INFO 18240 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-01T09:24:30.384+02:00  INFO 18240 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.41
+2025-08-01T09:24:30.400+02:00  INFO 18240 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-01T09:24:30.480+02:00  INFO 18240 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 Hibernate: alter table bidlist modify column ask  float(53)
 Hibernate: alter table bidlist modify column ask_quantity  float(53)
 Hibernate: alter table bidlist modify column bid  float(53)
@@ -109,17 +107,39 @@ Hibernate: alter table trade modify column revision_date  datetime(6)
 Hibernate: alter table trade modify column sell_price  float(53)
 Hibernate: alter table trade modify column sell_quantity  float(53)
 Hibernate: alter table trade modify column trade_date  datetime(6)
-2025-08-01T09:24:27.953+02:00  INFO 18240 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-01T09:24:28.431+02:00  WARN 18240 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-01T09:24:28.591+02:00  INFO 18240 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32182bf8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75aeec0a, org.springframework.security.web.context.SecurityContextHolderFilter@4960b819, org.springframework.security.web.header.HeaderWriterFilter@4fe3199d, org.springframework.security.web.authentication.logout.LogoutFilter@9e4388d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e757f39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@192aeae2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1181526e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b8cdc4, org.springframework.security.web.access.ExceptionTranslationFilter@28b47211, org.springframework.security.web.access.intercept.AuthorizationFilter@4088c5e6]
-2025-08-01T09:24:29.122+02:00  INFO 18240 --- [           main] com.nnk.springboot.BidTest               : Started BidTest in 4.343 seconds (process running for 5.248)
-Hibernate: insert into bidlist (account,ask,ask_quantity,benchmark,bid,bid_list_date,bid_quantity,book,commentary,creation_date,creation_name,deal_name,deal_type,revision_date,revision_name,security,side,source_list_id,status,trader,type) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-Hibernate: select b1_0.id,b1_0.account,b1_0.ask,b1_0.ask_quantity,b1_0.benchmark,b1_0.bid,b1_0.bid_list_date,b1_0.bid_quantity,b1_0.book,b1_0.commentary,b1_0.creation_date,b1_0.creation_name,b1_0.deal_name,b1_0.deal_type,b1_0.revision_date,b1_0.revision_name,b1_0.security,b1_0.side,b1_0.source_list_id,b1_0.status,b1_0.trader,b1_0.type from bidlist b1_0 where b1_0.id=?
-Hibernate: update bidlist set account=?,ask=?,ask_quantity=?,benchmark=?,bid=?,bid_list_date=?,bid_quantity=?,book=?,commentary=?,creation_date=?,creation_name=?,deal_name=?,deal_type=?,revision_date=?,revision_name=?,security=?,side=?,source_list_id=?,status=?,trader=?,type=? where id=?
-Hibernate: select b1_0.id,b1_0.account,b1_0.ask,b1_0.ask_quantity,b1_0.benchmark,b1_0.bid,b1_0.bid_list_date,b1_0.bid_quantity,b1_0.book,b1_0.commentary,b1_0.creation_date,b1_0.creation_name,b1_0.deal_name,b1_0.deal_type,b1_0.revision_date,b1_0.revision_name,b1_0.security,b1_0.side,b1_0.source_list_id,b1_0.status,b1_0.trader,b1_0.type from bidlist b1_0
-Hibernate: select b1_0.id,b1_0.account,b1_0.ask,b1_0.ask_quantity,b1_0.benchmark,b1_0.bid,b1_0.bid_list_date,b1_0.bid_quantity,b1_0.book,b1_0.commentary,b1_0.creation_date,b1_0.creation_name,b1_0.deal_name,b1_0.deal_type,b1_0.revision_date,b1_0.revision_name,b1_0.security,b1_0.side,b1_0.source_list_id,b1_0.status,b1_0.trader,b1_0.type from bidlist b1_0 where b1_0.id=?
-Hibernate: delete from bidlist where id=?
-Hibernate: select b1_0.id,b1_0.account,b1_0.ask,b1_0.ask_quantity,b1_0.benchmark,b1_0.bid,b1_0.bid_list_date,b1_0.bid_quantity,b1_0.book,b1_0.commentary,b1_0.creation_date,b1_0.creation_name,b1_0.deal_name,b1_0.deal_type,b1_0.revision_date,b1_0.revision_name,b1_0.security,b1_0.side,b1_0.source_list_id,b1_0.status,b1_0.trader,b1_0.type from bidlist b1_0 where b1_0.id=?
+2025-08-01T09:24:30.669+02:00  INFO 18240 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-01T09:24:30.757+02:00  WARN 18240 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-01T09:24:30.771+02:00  INFO 18240 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63fcbf75, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@663d59ed, org.springframework.security.web.context.SecurityContextHolderFilter@71c77042, org.springframework.security.web.header.HeaderWriterFilter@3b6d94fc, org.springframework.security.web.authentication.logout.LogoutFilter@9b84747, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2835574b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@665fb1d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@142ac60e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64d49e35, org.springframework.security.web.access.ExceptionTranslationFilter@5524e471, org.springframework.security.web.access.intercept.AuthorizationFilter@50aa482f]
+2025-08-01T09:24:30.905+02:00  INFO 18240 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-01T09:24:30.905+02:00  INFO 18240 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-01T09:24:30.905+02:00  INFO 18240 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-08-01T09:24:30.905+02:00  INFO 18240 --- [           main] com.nnk.springboot.SecurityTest          : Started SecurityTest in 0.825 seconds (process running for 7.043)
+Hibernate: select next_val as id_val from users_seq for update
+Hibernate: update users_seq set next_val= ? where next_val=?
+Hibernate: insert into users (fullname,password,role,username,id) values (?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.fullname,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.fullname,u1_0.password,u1_0.role,u1_0.username from users u1_0
+Hibernate: select u1_0.id,u1_0.fullname,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: delete from users where id=?
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginAndLogoutAccessRestriction" classname="com.nnk.springboot.SecurityTest" time="0.161">
+    <system-out><![CDATA[Hibernate: insert into users (fullname,password,role,username,id) values (?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.fullname,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.fullname,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: delete from users where id=?
+]]></system-out>
+  </testcase>
+  <testcase name="testAccessDeniedForUnauthenticatedUser" classname="com.nnk.springboot.SecurityTest" time="0"/>
+  <testcase name="testLogout" classname="com.nnk.springboot.SecurityTest" time="0.149">
+    <system-out><![CDATA[Hibernate: insert into users (fullname,password,role,username,id) values (?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.fullname,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.fullname,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: delete from users where id=?
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginFailureWithInvalidCredentials" classname="com.nnk.springboot.SecurityTest" time="0.072">
+    <system-out><![CDATA[Hibernate: select u1_0.id,u1_0.fullname,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
 ]]></system-out>
   </testcase>
 </testsuite>

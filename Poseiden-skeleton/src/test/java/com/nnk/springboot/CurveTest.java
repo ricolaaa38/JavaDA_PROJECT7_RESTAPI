@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,6 +22,10 @@ public class CurveTest {
 
 		CurvePoint curvePointList = new CurvePoint();
 		curvePointList.setCurveId(10);
+		curvePointList.setTerm(1.0);
+		curvePointList.setValue(100.0);
+		curvePointList.setCreationDate(LocalDateTime.now()); // Conversion
+		curvePointList.setAsOfDate(LocalDateTime.now());
 
 		// Save
 		curvePointList = curvePointRepository.save(curvePointList);

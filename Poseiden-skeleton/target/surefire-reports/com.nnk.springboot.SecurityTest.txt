@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.nnk.springboot.BidTest
+Test set: com.nnk.springboot.SecurityTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.431 s - in com.nnk.springboot.BidTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.829 s - in com.nnk.springboot.SecurityTest

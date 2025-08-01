@@ -13,8 +13,10 @@ com\nnk\springboot\controllers\UserController.class
 com\nnk\springboot\controllers\TradeController.class
 com\nnk\springboot\domain\RuleName.class
 com\nnk\springboot\domain\Rating.class
+com\nnk\springboot\domain\UserDTO.class
 com\nnk\springboot\controllers\RuleNameController.class
 com\nnk\springboot\domain\CurvePoint.class
+com\nnk\springboot\security\SecurityConfig.class
 com\nnk\springboot\controllers\HomeController.class
 com\nnk\springboot\controllers\BidListController.class
 com\nnk\springboot\repositories\CurvePointRepository.class

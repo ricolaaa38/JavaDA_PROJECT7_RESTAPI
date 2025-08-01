@@ -13,12 +13,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.validation.Valid;
 
+/**
+ * CurveController class for managing curve points.
+ * It handles requests for listing, adding, updating, and deleting curve points.
+ */
 @Controller
 public class CurveController {
 
     @Autowired
     private CurvePointRepository curvePointRepository;
 
+    /**
+     * Displays the list of curve points.
+     *
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render
+     */
     @RequestMapping("/curvePoint/list")
     public String home(Model model)
     {
@@ -26,11 +36,25 @@ public class CurveController {
         return "curvePoint/list";
     }
 
+    /**
+     * Displays the form to add a new curve point.
+     *
+     * @param bid the CurvePoint object to bind to the form
+     * @return the name of the view to render
+     */
     @GetMapping("/curvePoint/add")
     public String addBidForm(CurvePoint bid) {
         return "curvePoint/add";
     }
 
+    /**
+     * Validates and saves a new curve point.
+     *
+     * @param curvePoint the CurvePoint object containing curve point data
+     * @param result the BindingResult to check for validation errors
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render or redirect to the curve point list
+     */
     @PostMapping("/curvePoint/validate")
     public String validate(@Valid CurvePoint curvePoint, BindingResult result, Model model) {
         if (!result.hasErrors()) {
@@ -41,6 +65,13 @@ public class CurveController {
         return "curvePoint/add";
     }
 
+    /**
+     * Displays the form to update an existing curve point.
+     *
+     * @param id the ID of the curve point to update
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render
+     */
     @GetMapping("/curvePoint/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         CurvePoint curvePoint = curvePointRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid curvePoint Id:" + id));
@@ -48,6 +79,15 @@ public class CurveController {
         return "curvePoint/update";
     }
 
+    /**
+     * Validates and updates an existing curve point.
+     *
+     * @param id the ID of the curve point to update
+     * @param curvePoint the CurvePoint object containing updated data
+     * @param result the BindingResult to check for validation errors
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render or redirect to the curve point list
+     */
     @PostMapping("/curvePoint/update/{id}")
     public String updateBid(@PathVariable("id") Integer id, @Valid CurvePoint curvePoint,
                              BindingResult result, Model model) {
@@ -60,6 +100,13 @@ public class CurveController {
         return "redirect:/curvePoint/list";
     }
 
+    /**
+     * Deletes a curve point by its ID.
+     *
+     * @param id the ID of the curve point to delete
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render or redirect to the curve point list
+     */
     @GetMapping("/curvePoint/delete/{id}")
     public String deleteBid(@PathVariable("id") Integer id, Model model) {
         CurvePoint curvePoint = curvePointRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid curvePoint Id:" + id));

@@ -1,6 +1,7 @@
+com\nnk\springboot\SecurityTest.class
+com\nnk\springboot\PasswordEncodeTest.class
+com\nnk\springboot\CurveTest.class
 com\nnk\springboot\RatingTest.class
 com\nnk\springboot\RuleTest.class
-com\nnk\springboot\PasswordEncodeTest.class
 com\nnk\springboot\BidTest.class
-com\nnk\springboot\CurveTest.class
 com\nnk\springboot\TradeTest.class

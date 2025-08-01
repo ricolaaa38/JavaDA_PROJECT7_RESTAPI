@@ -8,6 +8,13 @@ import lombok.Data;
 import java.sql.Date;
 import java.sql.Timestamp;
 
+/**
+ * BidList entity representing a list of bids in the system.
+ * It includes fields for account, type, bid and ask quantities, prices,
+ * benchmark, bid list date, commentary, security, status, trader,
+ * book, creation and revision details, deal name, deal type, source list ID,
+ * and side.
+ */
 @Entity
 @Table(name = "bidlist")
 @Data

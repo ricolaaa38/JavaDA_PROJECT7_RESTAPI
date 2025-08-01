@@ -3,10 +3,12 @@ C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Po
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\controllers\CurveController.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\controllers\RatingController.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\controllers\LoginController.java
+C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\security\SecurityConfig.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\controllers\RuleNameController.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\domain\BidList.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\domain\Rating.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\repositories\CurvePointRepository.java
+C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\domain\UserDTO.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\Application.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\repositories\RatingRepository.java
 C:\Users\nicol\OneDrive\Bureau\Formation Java\projet7\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\java\com\nnk\springboot\repositories\TradeRepository.java

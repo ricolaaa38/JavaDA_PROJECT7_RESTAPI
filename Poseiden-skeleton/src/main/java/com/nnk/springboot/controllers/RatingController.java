@@ -13,12 +13,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.validation.Valid;
 
+/**
+ * RatingController class for managing rating-related operations.
+ * It handles requests for listing, adding, updating, and deleting ratings.
+ */
 @Controller
 public class RatingController {
-    // TODO: Inject Rating service
-@Autowired
-private RatingRepository ratingRepository;
 
+    @Autowired
+    private RatingRepository ratingRepository;
+
+    /**
+     * Displays the list of ratings.
+     *
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render
+     */
     @RequestMapping("/rating/list")
     public String home(Model model)
     {
@@ -26,11 +36,25 @@ private RatingRepository ratingRepository;
         return "rating/list";
     }
 
+    /**
+     * Displays the form to add a new rating.
+     *
+     * @param rating the Rating object to bind to the form
+     * @return the name of the view to render
+     */
     @GetMapping("/rating/add")
     public String addRatingForm(Rating rating) {
         return "rating/add";
     }
 
+    /**
+     * Validates and saves a new rating.
+     *
+     * @param rating the Rating object containing rating data
+     * @param result the BindingResult to check for validation errors
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render or redirect to the rating list
+     */
     @PostMapping("/rating/validate")
     public String validate(@Valid Rating rating, BindingResult result, Model model) {
         if (!result.hasErrors()) {
@@ -41,6 +65,13 @@ private RatingRepository ratingRepository;
         return "rating/add";
     }
 
+    /**
+     * Displays the form to update an existing rating.
+     *
+     * @param id the ID of the rating to update
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render
+     */
     @GetMapping("/rating/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         Rating rating = ratingRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid rating Id:" + id));
@@ -48,6 +79,15 @@ private RatingRepository ratingRepository;
         return "rating/update";
     }
 
+    /**
+     * Updates an existing rating.
+     *
+     * @param id the ID of the rating to update
+     * @param rating the Rating object containing updated data
+     * @param result the BindingResult to check for validation errors
+     * @param model the model to add attributes for the view
+     * @return the name of the view to render or redirect to the rating list
+     */
     @PostMapping("/rating/update/{id}")
     public String updateRating(@PathVariable("id") Integer id, @Valid Rating rating,
                              BindingResult result, Model model) {
@@ -60,6 +100,13 @@ private RatingRepository ratingRepository;
         return "redirect:/rating/list";
     }
 
+    /**
+     * Deletes a rating by its ID.
+     *
+     * @param id the ID of the rating to delete
+     * @param model the model to add attributes for the view
+     * @return the name of the view to redirect to the rating list
+     */
     @GetMapping("/rating/delete/{id}")
     public String deleteRating(@PathVariable("id") Integer id, Model model) {
         Rating rating = ratingRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid rating Id:" + id));

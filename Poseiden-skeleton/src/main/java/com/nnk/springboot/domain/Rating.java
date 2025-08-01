@@ -3,10 +3,15 @@ package com.nnk.springboot.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.sql.Timestamp;
 
+/**
+ * Rating entity representing a rating in the system.
+ * It includes fields for Moody's rating, S and P rating, Fitch rating, and order number.
+ */
 @Entity
 @Table(name = "rating")
 @Data
@@ -28,7 +33,7 @@ public class Rating {
     @Column(name = "fitchRating")
     private String fitchRating;
 
-    @NotBlank(message = "OrderNumber est obligatoire")
+    @NotNull(message = "OrderNumber est obligatoire")
     @Column(name = "orderNumber")
     private Integer orderNumber;
 

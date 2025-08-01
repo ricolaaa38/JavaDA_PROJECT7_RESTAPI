@@ -7,8 +7,12 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
-
+/**
+ * CurvePoint entity representing a point on a curve in the system.
+ * It includes fields for curve ID, date, term, value, and creation date.
+ */
 @Entity
 @Table(name = "curve_point")
 @Data
@@ -24,7 +28,7 @@ public class CurvePoint {
 
     @NotNull(message = "AsOfDate est obligatoire")
     @Column(name = "asOfDate")
-    private Timestamp asOfDate;
+    private LocalDateTime asOfDate;
 
     @NotNull(message = "Term est obligatoire")
     @Column(name = "term")
@@ -36,5 +40,5 @@ public class CurvePoint {
 
     @NotNull(message = "CreationDate est obligatoire")
     @Column(name = "creationDate")
-    private Timestamp creationDate;
+    private LocalDateTime creationDate;
 }
