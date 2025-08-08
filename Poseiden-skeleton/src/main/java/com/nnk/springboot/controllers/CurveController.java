@@ -59,8 +59,9 @@ public class CurveController {
     public String validate(@Valid CurvePoint curvePoint, BindingResult result, Model model) {
         if (!result.hasErrors()) {
             curvePointRepository.save(curvePoint);
-            model.addAttribute("curvePoints", curvePointRepository.findAll());
             return "redirect:/curvePoint/list";
+        } else {
+            System.out.println("Erreur de validation : " + result.getAllErrors());
         }
         return "curvePoint/add";
     }

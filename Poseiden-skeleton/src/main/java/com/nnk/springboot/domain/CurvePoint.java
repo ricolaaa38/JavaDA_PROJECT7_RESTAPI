@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
  * It includes fields for curve ID, date, term, value, and creation date.
  */
 @Entity
-@Table(name = "curve_point")
+@Table(name = "curvepoint")
 @Data
 public class CurvePoint {
 
@@ -26,7 +26,6 @@ public class CurvePoint {
     @Column(name = "CurveId")
     private Integer curveId;
 
-    @NotNull(message = "AsOfDate est obligatoire")
     @Column(name = "asOfDate")
     private LocalDateTime asOfDate;
 
@@ -38,7 +37,17 @@ public class CurvePoint {
     @Column(name = "value")
     private Double value;
 
-    @NotNull(message = "CreationDate est obligatoire")
     @Column(name = "creationDate")
     private LocalDateTime creationDate;
+
+    @PrePersist
+    protected void onCreate() {
+        creationDate = LocalDateTime.now();
+        asOfDate = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        asOfDate = LocalDateTime.now();
+    }
 }

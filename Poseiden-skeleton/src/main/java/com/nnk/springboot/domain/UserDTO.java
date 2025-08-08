@@ -19,7 +19,7 @@ public class UserDTO {
 
     @NotBlank(message = "Password is mandatory")
     @Pattern(regexp = "^(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
-            message = "Password must have at least 8 characters, one uppercase letter, one number, and one symbol")
+            message = "Password must have at least 8 characters, one uppercase letter, one number, and one symbol: @$!%*?&")
     private String password;
 
     @NotBlank(message = "FullName is mandatory")
